@@ -1,0 +1,8 @@
+.date{
+  font-size: 0.9rem;
+  color: #788087;
+}
+.date__text{
+  margin: 0 0 0 5px;
+  display: inline-block;
+}

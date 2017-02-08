@@ -1,0 +1,13 @@
+body{
+  background-size: cover;
+  background-position: center center;
+  background: url(./images/bg.jpg); 
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+}
+.body{
+  margin: 0 auto;
+  width: 750px;
+  background: #ffffff;
+  padding: 0 20px;
+}

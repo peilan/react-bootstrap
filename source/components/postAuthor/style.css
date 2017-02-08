@@ -1,0 +1,8 @@
+.author{
+  font-size: 0.9rem;
+  color: #4b49a9;
+}
+.author__name{
+  margin: 0 0 0 5px;
+  display: inline-block;
+}
