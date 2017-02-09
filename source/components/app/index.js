@@ -3,15 +3,20 @@ import React, {
 } from 'react'
 import styles from  './style.css'
 import Preview from '../../components/preview'
+import testData from './testData/data'
 
 export default class App extends Component {
   render() {
     return  <div className={styles.body}> 
-      <Preview/>
-      <Preview/>
-      <Preview/>
-      <Preview/>
-      <Preview/>
+      {testData.map( (item, index) => <Preview 
+        key={index}
+        title={item.title}
+        author={item.author}
+        date={item.date}
+        image={item.image}
+        textPreview={item.textPreview}
+        title={item.title}  />
+      )}
     </div>
   }
 }
