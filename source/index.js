@@ -2,11 +2,11 @@ import React from 'react'
 import {
   render
 } from 'react-dom'
-import Body from './components/body'
+import App from './components/app'
 
 render( 
   <div> 
-    <Body/>
+    <App/>
   </div>,
   document.getElementById('root')
 );
