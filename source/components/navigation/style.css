@@ -1,0 +1,27 @@
+.navigation{
+  width: 100%;
+  display: inline-block;
+  font-family: Segoue;
+}
+
+.back, .forward{
+  width: 50%;
+  display: inline-block;
+  font-size: 1.5rem;
+  text-align: center;
+  vertical-align: middle;
+  height: 50px;
+  line-height: 50px;
+  color: #788087;
+}
+.back{
+}
+.forward{
+}
+.back:hover, .forward:hover{
+  background: #eae4b5;
+}
+
+.disabled {
+  color: #cacdd0;  
+}

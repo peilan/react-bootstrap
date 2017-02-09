@@ -3,6 +3,7 @@ import React, {
 } from 'react'
 import styles from  './style.css'
 import Preview from '../../components/preview'
+import Navigation from '../../components/navigation'
 import testData from './testData/data'
 
 export default class App extends Component {
@@ -17,6 +18,7 @@ export default class App extends Component {
         textPreview={item.textPreview}
         title={item.title}  />
       )}
+      <Navigation />
     </div>
   }
 }
