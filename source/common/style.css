@@ -136,3 +136,27 @@ table {
   font-family: Segoue; 
   src: url(./segoe-ui-semilight.ttf); 
 }
+@font-face {
+  font-family: chasing; 
+  src: url(./fonts/chasing-embers.otf); 
+}
+@font-face {
+  font-family: deadaluss; 
+  src: url(./fonts/deadaluss-sript.ttf); 
+}
+@font-face {
+  font-family: mount; 
+  src: url(./fonts/mount-baker.otf); 
+}
+@font-face {
+  font-family: rage; 
+  src: url(./fonts/rage-italic.ttf); 
+}
+@font-face {
+  font-family: thander; 
+  src: url(./fonts/thander.otf); 
+}
+@font-face {
+  font-family: putin; 
+  src: url(./fonts/putin.otf); 
+}

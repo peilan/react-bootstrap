@@ -4,11 +4,13 @@ import React, {
 import styles from  './style.css'
 import Preview from '../../components/preview'
 import Navigation from '../../components/navigation'
+import Header from '../../components/header'
 import testData from './testData/data'
 
 export default class App extends Component {
   render() {
     return  <div className={styles.body}> 
+      <Header />
       {testData.map( (item, index) => <Preview 
         key={index}
         title={item.title}
