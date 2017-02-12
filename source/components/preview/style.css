@@ -4,32 +4,32 @@
   font-family: Segoue;
 }
 
-.preview__header{
+.header{
   font-size: 1.3rem;
   color: #4b49a9;
   text-decoration: none;
   text-align: justify;
 }
 
-.preview__box{
+.container{
   margin: 10px 0 0 0;
   display: flex;
   align-items: flex-start;
 }
-.preview__img{
+.image{
   display: block;
   max-width: 100%;
   height: auto;
   margin: 0 2% 0 0;
 }
-.preview__content{
+.content{
   text-align: justify;
 }
-.preview__author, .preview__date{
+.author, .date{
   margin: 10px 0 0 0;
   width: 50%;
   display: inline-block;
 }
-.preview__author{
+.author{
   text-align: right;
 }

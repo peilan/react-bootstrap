@@ -1,7 +1,6 @@
 .navigation{
   width: 100%;
   display: inline-block;
-  font-family: Segoue;
 }
 
 .back, .forward{
@@ -13,10 +12,7 @@
   height: 50px;
   line-height: 50px;
   color: #788087;
-}
-.back{
-}
-.forward{
+    text-decoration: none;
 }
 .back:hover, .forward:hover{
   background: #eae4b5;
@@ -24,4 +20,14 @@
 
 .disabled {
   color: #cacdd0;  
+}
+.arrowLeft, .arrowRight{
+  font-family: FontAwesome;
+  font-size: 1.5rem;
+}
+.arrowLeft:before{
+  content: "\f060"
+}
+.arrowRight:before{
+  content: "\f061"
 }

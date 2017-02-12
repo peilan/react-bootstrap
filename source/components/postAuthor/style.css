@@ -2,7 +2,13 @@
   font-size: 0.9rem;
   color: #4b49a9;
 }
-.author__name{
+.authorName{
   margin: 0 0 0 5px;
   display: inline-block;
+}
+.userIcon{
+  font-family: FontAwesome;
+}
+.userIcon::before{
+  content: "\f2c0";
 }

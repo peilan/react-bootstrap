@@ -2,7 +2,13 @@
   font-size: 0.9rem;
   color: #788087;
 }
-.date__text{
+.dateText{
   margin: 0 0 0 5px;
   display: inline-block;
+}
+.calendarIcon {
+  font-family: FontAwesome;
+}
+.calendarIcon:before {
+  content: "\f133";
 }
