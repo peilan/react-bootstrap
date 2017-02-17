@@ -10,9 +10,9 @@ export default class App extends Component {
   render() {
     return <div>
       {testData.map((item, index) => {
-        const {title, author, date, image, textPreview} = item
+        const {title, author, date, image, textPreview, id} = item
         return <div className={styles.preview} key={index}>
-          <Link to="/post/qwe" className={styles.header}>{title}</Link>
+          <Link to={`/post/${id}`} className={styles.header}>{title}</Link>
           <div className={styles.container}>
             <img className={styles.image} src={image} alt=""/>
             <div className={styles.content}>{textPreview}</div>
