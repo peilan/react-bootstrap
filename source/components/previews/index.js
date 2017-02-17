@@ -3,17 +3,16 @@ import styles from './style.css'
 import PostAuthor from '../../components/postAuthor'
 import PostDate from '../../components/postDate'
 import Navigation from '../../components/navigation'
-import Header from '../../components/header'
 import testData from './testData/data'
+import { Link } from 'react-router'
 
 export default class App extends Component {
   render() {
-    return <div className={styles.body}>
-      <Header/> 
+    return <div>
       {testData.map((item, index) => {
         const {title, author, date, image, textPreview} = item
         return <div className={styles.preview} key={index}>
-          <a href="/" className={styles.header}>{title}</a>
+          <Link to="/post" className={styles.header}>{title}</Link>
           <div className={styles.container}>
             <img className={styles.image} src={image} alt=""/>
             <div className={styles.content}>{textPreview}</div>
