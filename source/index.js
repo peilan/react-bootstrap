@@ -1,8 +1,8 @@
 import React from 'react'
 import {render} from 'react-dom'
-import App from './components/app'
+import Previews from './components/app'
 
 render(
   <div>
-  <App/>
+  <Previews/>
 </div>, document.getElementById('root'));

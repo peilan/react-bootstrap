@@ -1,9 +1,21 @@
+body{
+  background-size: cover;
+  background-position: center center;
+  background: url(./images/bg.jpg); 
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+}
+.body{
+  margin: 0 auto;
+  width: 750px;
+  background: #ffffff;
+  padding: 30px 20px;
+}
 .preview{
   max-width: 750px;
   height: 250px;
   font-family: Segoue;
 }
-
 .header{
   font-size: 1.3rem;
   color: #4b49a9;
