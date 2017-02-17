@@ -9,7 +9,7 @@ render(
   <Router history={browserHistory}>
     <Route path='/' component={App}>
       <IndexRoute component={Previews} />
-      <Route path='post' component={Post} />
+      <Route path='post/:postTitle' component={Post} />
     </Route>
   </Router>,
   document.getElementById('root')

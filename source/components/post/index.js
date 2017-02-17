@@ -4,7 +4,7 @@ import styles from './style.css'
 export default class Post extends Component {
   render() {
     return <h2 className={styles.pink}>
-      post
+      {this.props.params.postTitle}
     </h2>
   }
 }
