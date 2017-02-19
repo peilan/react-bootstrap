@@ -6,7 +6,7 @@ export default class Post extends Component {
     const {date} = this.props
     return <div className={styles.date}>
       <i className={styles.calendarIcon}></i>
-      <div className={styles.dateText}>{date}</div>
+      <div className={styles.dateText}>{date}dfjh</div>
     </div>
   }
 }

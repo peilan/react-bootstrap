@@ -9,17 +9,12 @@ const compiler = webpack(webpackConfig);
 
 app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
-  stats: {
-    colors: true,
-  },
   hot:true,
   fileName: webpackConfig.output.fileName,
   publicPath: webpackConfig.output.publicPath,
-  //contentBase: path.resolve(__dirname)
 }));
 
 app.use(require('webpack-hot-middleware')(compiler, {
-  log: console.log,
   path: '/__webpack_hmr',
   heartbeat: 10 * 1000
 }));
@@ -34,5 +29,4 @@ const server = http.createServer(app);
 server.listen(process.env.PORT || 3000, function onListen() {
   const address = server.address();
   console.log('Listening on: %j', address);
-  console.log(' -> that probably means: http://localhost:%d', address.port);
 });

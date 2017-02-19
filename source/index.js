@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import { AppContainer } from 'react-hot-loader';
-
-import App from './app';
+import AppRouter from './appRouter';
 
 const render = (Component) => {
   ReactDOM.render(
@@ -14,11 +12,10 @@ const render = (Component) => {
   );
 };
 
-render(App);
+render(AppRouter);
 
-// Hot Module Replacement API
 if (module.hot) {
-  module.hot.accept('./app', () => {
-    render(App)
+  module.hot.accept('./appRouter', () => {
+    render(AppRouter)
   });
 }

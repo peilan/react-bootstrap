@@ -5,7 +5,7 @@ import Previews from './components/previews'
 import Post from './components/post'
 import Page from './containers/page'
 
-export default class App extends Component {
+export default class AppRouter extends Component {
   render() {return <Router history={browserHistory}>
       <Route path='/' component={Page}>
         <IndexRoute component={Previews}/>

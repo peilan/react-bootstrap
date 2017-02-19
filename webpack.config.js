@@ -5,7 +5,6 @@ module.exports = {
   entry: [
     'react-hot-loader/patch',
     'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
-    //'webpack/hot/only-dev-server',
     path.resolve(__dirname, './source/index')
   ],
   output: {
@@ -55,5 +54,6 @@ module.exports = {
     new webpack.NamedModulesPlugin(),
     new ExtractTextPlugin('bundle.css'),
     new webpack.HotModuleReplacementPlugin()
-  ]
+  ],
+  stats: "errors-only"
 };
