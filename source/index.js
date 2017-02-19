@@ -1,16 +1,24 @@
-import React from 'react'
-import { Router, Route, browserHistory, IndexRoute } from 'react-router'
-import {render} from 'react-dom'
-import Previews from './components/previews'
-import Post from './components/post'
-import App from './containers/app'
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-render(
-  <Router history={browserHistory}>
-    <Route path='/' component={App}>
-      <IndexRoute component={Previews} />
-      <Route path='post/:postId' component={Post} />
-    </Route>
-  </Router>,
-  document.getElementById('root')
-)
+import { AppContainer } from 'react-hot-loader';
+
+import App from './app';
+
+const render = (Component) => {
+  ReactDOM.render(
+    <AppContainer>
+      <Component/>
+    </AppContainer>,
+    document.getElementById('root')
+  );
+};
+
+render(App);
+
+// Hot Module Replacement API
+if (module.hot) {
+  module.hot.accept('./app', () => {
+    render(App)
+  });
+}

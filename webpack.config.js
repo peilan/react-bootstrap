@@ -1,23 +1,22 @@
 var path = require('path');
-
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const webpack = require('webpack')
 module.exports = {
   entry: [
+    'react-hot-loader/patch',
+    'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
+    //'webpack/hot/only-dev-server',
     path.resolve(__dirname, './source/index')
   ],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, './lib'),
-    publicPath: '/static',
+    publicPath: '/static/',
   },
-  devServer: {
-    port: 3333,
-    contentBase: path.resolve(__dirname),
-    inline: true
-  },
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   module: {
     rules: [{
-        test: /\.jsx?$/,
+        test: /\.js?$/,
         use: ['babel-loader']
       }, {
         test: /\.css$/,
@@ -51,5 +50,10 @@ module.exports = {
         }]
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.NamedModulesPlugin(),
+    new ExtractTextPlugin('bundle.css'),
+    new webpack.HotModuleReplacementPlugin()
+  ]
 };
