@@ -1,10 +1,9 @@
-.pink {
-  background-color: pink;
-  display: block;
-  width: 200px;
-  height: 300px;
+.header{
+  font-size: 1.3rem;
+  color: #4b49a9;
+  text-align: justify;
 }
 
-h2{
-  color:red;  
+.content{
+  
 }

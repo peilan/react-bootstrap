@@ -3,7 +3,7 @@ import styles from './style.css'
 import PostAuthor from '../../components/postAuthor'
 import PostDate from '../../components/postDate'
 import Navigation from '../../components/navigation'
-import testData from './testData/data'
+import testData from '../../testData/data'
 import { Link } from 'react-router'
 
 export default class App extends Component {
