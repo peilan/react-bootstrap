@@ -6,7 +6,7 @@ export default class App extends Component {
   render() {
     return <div>
       <Jumbotron className={style.content}>
-        <h1>React-bootstrap example!</h1>
+        <h1>React-bootstrap example!d</h1>
         <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
         <p><Button onClick={this.openDocs} bsStyle="primary">Learn more</Button></p>
       </Jumbotron>

@@ -1,5 +1,4 @@
 var path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const webpack = require('webpack')
 module.exports = {
   entry: {
@@ -10,38 +9,30 @@ module.exports = {
     vendor:[
       'react',
       'react-bootstrap',
-      'react-dom'
+      'react-dom',
+      'react-hot-loader'
     ]
   },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, './lib'),
-    publicPath: '/static/'
+    publicPath: '/lib/'
   },
-  devtool: 'inline-source-map',
   module: {
     rules: [
       {
         test: /\.js?$/,
-        use: ['babel-loader']
+        use: ['babel-loader'],
+        exclude:path.resolve(__dirname, 'node_modules')
       }, {
         test: /\.css$/,
+        exclude: path.resolve(__dirname, 'bootstrap.min.css'),
         use: [
           'style-loader', {
             loader: 'css-loader',
             options: {
               modules: true,
               localIdentName: '[path][name]__[local]'
-            }
-          }
-        ]
-      }, {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader',
-            query: {
-              minimize: true
             }
           }
         ]
@@ -59,12 +50,16 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.NamedModulesPlugin(),
-    new ExtractTextPlugin('bundle.css'),
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
-      names: ['vendor']
-    })
-  ],
-  stats: "errors-only"
+      filename: 'vendor.js',
+      name: 'vendor',
+      minChunks: Infinity
+    }),
+    new webpack.SourceMapDevToolPlugin({
+      filename: '[file].map',
+      exclude: ['vendor.js']
+    }),
+  ]
 };
