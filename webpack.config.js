@@ -1,8 +1,9 @@
-var path = require('path');
+const path = require('path');
 const webpack = require('webpack')
 module.exports = {
   entry: {
-    app: [ 'react-hot-loader/patch', 
+    app: [ 
+      'react-hot-loader/patch', 
       'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000', 
       path.resolve(__dirname, './source/index')
     ],
